@@ -5,3 +5,19 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+require 'rubygems'
+require 'faker'
+
+
+
+
+
+
+
+10.times do
+  title = Faker::Lorem.sentence
+  content =  Faker::Lorem.paragraph(2, false, 4)
+  article = Article.new(title: title, content: content)
+  article.save
+end
+
